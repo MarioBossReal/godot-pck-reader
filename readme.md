@@ -5,6 +5,12 @@ It reads the `.pck` header and file table, then returns metadata including direc
 
 ---
 
+## Installation
+
+Copy the pck-reader directory to your project's directory. For GDScript users, delete "PckReader.cs". For CSharp users, delete the "gdscript" subdirectory.
+
+---
+
 ## Use Case
 
 The primary use case for this tool is for validating the directory structure of a PCK before mounting it to your running game.
@@ -30,7 +36,7 @@ At some point, your game will load the crate.tscn prefab and possibly execute ar
 
 ## Solution
 
-The solution here is to structure your game so that all mods are required to have their files within a unique and defined base directory.
+The solution here is to structure your game so that all mods are required to have their files within a unique and well-defined base directory.
 For example, a mod named "mymod.pck" must not have any directory that does not begin with "mods/mymod/". This way, even if there are malicious resource files
 embedded within the PCK, they will never override any core game files and thus your application will never unintentionally load a resource that comes from an unexpected directory.
 
