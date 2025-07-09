@@ -84,7 +84,7 @@ foreach (var dir in data.Directories)
 {
     if (!dir.StartsWith(baseDir))
     {
-        GD.Print($"Invalid directory in mod PCK: {dir}";
+        GD.Print($"Invalid directory in mod PCK: {dir}");
         return;     
     }
 }
