@@ -82,7 +82,7 @@ var baseDir = $"mods/{modName}/"
 
 foreach (var dir in data.Directories)
 {
-    if (!dir.StartsWith(baseDir)
+    if (!dir.StartsWith(baseDir))
     {
         GD.Print($"Invalid directory in mod PCK: {dir}";
         return;     
